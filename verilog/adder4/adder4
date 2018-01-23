@@ -1,0 +1,54 @@
+#! c:/iverilog/bin/vvp
+:ivl_version "0.10.0 (devel)" "(s20130827)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_010333B0 .scope module, "adder_test" "adder_test" 2 1;
+ .timescale 0 0;
+v008830F8_0 .var "a", 3 0;
+v008845E0_0 .var "b", 3 0;
+v00884638_0 .net "result", 3 0, L_00884690;  1 drivers
+S_00882FD0 .scope module, "dut" "adder" 2 4, 3 1 0, S_010333B0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a"
+    .port_info 1 /INPUT 4 "b"
+    .port_info 2 /OUTPUT 4 "result"
+v010332E0_0 .net "a", 3 0, v008830F8_0;  1 drivers
+v01033480_0 .net "b", 3 0, v008845E0_0;  1 drivers
+v008830A0_0 .net "result", 3 0, L_00884690;  alias, 1 drivers
+L_00884690 .arith/sum 4, v008830F8_0, v008845E0_0;
+    .scope S_010333B0;
+T_0 ;
+    %vpi_call 2 6 "$display", "output = %b", v00884638_0 {0 0};
+    %end;
+    .thread T_0;
+    .scope S_010333B0;
+T_1 ;
+    %vpi_call 2 9 "$dumpfile", "adder.vcd" {0 0};
+    %vpi_call 2 10 "$dumpvars" {0 0};
+    %end;
+    .thread T_1;
+    .scope S_010333B0;
+T_2 ;
+    %movi 8, 1, 4;
+    %set/v v008830F8_0, 8, 4;
+    %movi 8, 2, 4;
+    %set/v v008845E0_0, 8, 4;
+    %delay 10, 0;
+    %movi 8, 3, 4;
+    %set/v v008830F8_0, 8, 4;
+    %movi 8, 4, 4;
+    %set/v v008845E0_0, 8, 4;
+    %delay 10, 0;
+    %vpi_call 2 19 "$finish" {0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "adder_test.v";
+    "adder.v";
