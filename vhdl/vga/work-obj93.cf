@@ -1,0 +1,4 @@
+v 4
+file . "vga_controller.vhd" "daa87c368ab98d966a4f4f075c3cccee74e58baa" "20170131074051.189":
+  entity vga_sync at 2( 2) + 0 on 11;
+  architecture arch of vga_sync at 17( 385) + 0 on 12;

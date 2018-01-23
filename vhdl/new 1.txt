@@ -1,0 +1,14 @@
+library ieee;
+use ieee.numeric_bit.all;
+
+
+entity register is
+  port(clk: in bit;
+       addr:in unsigned(4 downto 0);
+       register_in: in unsigned(32 downto 0);
+	   register_out: out unsigned(32 downto 0);
+	   regw:in bit);
+end entity;
+
+architecture behav of register is 
+ 

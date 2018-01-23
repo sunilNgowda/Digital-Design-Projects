@@ -1,0 +1,21 @@
+$date
+  Sun Feb 05 05:48:21 2017
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$var reg 4 ! a_tb[3:0] $end
+$var reg 4 " b_tb[3:0] $end
+$var reg 1 # co_tb $end
+$var reg 4 $ s_tb[3:0] $end
+$scope module u0 $end
+$var reg 4 % a[3:0] $end
+$var reg 4 & b[3:0] $end
+$var reg 4 ' sum[3:0] $end
+$var reg 1 ( c $end
+$var reg 5 ) s[4:0] $end
+$upscope $end
+$enddefinitions $end

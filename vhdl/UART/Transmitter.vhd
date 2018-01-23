@@ -1,0 +1,2 @@
+entity Transmitter is
+  port()

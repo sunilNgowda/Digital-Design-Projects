@@ -1,0 +1,10 @@
+v 4
+file . "serial_adder_tb.vhdl" "1c44e4fea3293e4bee30da82f5c8a8170ef3c9a6" "20170207053521.303":
+  entity serial_adder_tb at 1( 0) + 0 on 29;
+  architecture behav of serial_adder_tb at 5( 83) + 0 on 30;
+file . "adder.vhdl" "e723cd6188374844825b61a0e9369d995ac699b5" "20170207051932.499":
+  entity adder at 1( 0) + 0 on 21;
+  architecture one of adder at 12( 145) + 0 on 22;
+file . "serial_adder.vhdl" "196d160d1e548be0241f38474bacc08a8972fbf9" "20170207053505.771":
+  entity serial_adder at 1( 0) + 0 on 27;
+  architecture behave of serial_adder at 15( 333) + 0 on 28;
